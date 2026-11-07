@@ -1,0 +1,150 @@
+{
+    "create_folder": {
+        "description": "Create a folder.",
+        "parameters": {
+            "name": {
+                "type": "str",
+                "description": "The name of the folder."
+            }
+        },
+        "validate": "folder_name"
+    },
+
+    "del_folder": {
+        "description": "Delete an empty folder.",
+        "parameters": {
+            "name": {
+                "type": "str",
+                "description": "The name of the empty folder."
+            }
+        },
+        "validate": "folder_name"
+    },
+
+    "ren_folder": {
+        "description": "Rename a folder.",
+        "parameters": {
+            "old_name": {
+                "type": "str",
+                "description": "The current folder name or path."
+            },
+            "new_name": {
+                "type": "str",
+                "description": "The new folder name or path."
+            }
+        }
+    },
+
+    "move": {
+        "description": "Move a file or folder.",
+        "parameters": {
+            "old_path": {
+                "type": "str",
+                "description": "The source path."
+            },
+            "new_path": {
+                "type": "str",
+                "description": "The destination path."
+            }
+        }
+    },
+
+    "copy": {
+        "description": "Copy a file.",
+        "parameters": {
+            "old_path": {
+                "type": "str",
+                "description": "The source file path."
+            },
+            "new_path": {
+                "type": "str",
+                "description": "The destination file path."
+            }
+        }
+    },
+
+    "search_web": {
+        "description": "Search Google for webpages matching a query.",
+        "parameters": {
+            "query": {
+                "type": "str",
+                "description": "The search query."
+            },
+            "limit": {
+                "type": "int",
+                "description": "Maximum number of results to return."
+            }
+        }
+    },
+
+    "search_videos": {
+        "description": "Search YouTube for videos matching a query.",
+        "parameters": {
+            "query": {
+                "type": "str",
+                "description": "The video search query."
+            },
+            "limit": {
+                "type": "int",
+                "description": "Maximum number of videos to return."
+            }
+        }
+    },
+
+    "list_contents": {
+        "description": "List all files and subfolders inside a directory.",
+        "parameters": {
+            "folder": {
+                "type": "str",
+                "description": "The path of the folder to list."
+            }
+        }
+    },
+
+    "see": {
+        "description": "Capture a screenshot of the current screen.",
+        "parameters": {}
+    },
+
+    "move_mouse": {
+        "description": "Move the mouse cursor to screen coordinates.",
+        "parameters": {
+            "x_pos": {
+                "type": "int",
+                "description": "The horizontal screen coordinate."
+            },
+            "y_pos": {
+                "type": "int",
+                "description": "The vertical screen coordinate."
+            }
+        }
+    },
+
+    "click": {
+        "description": "Click at screen coordinates.",
+        "parameters": {
+            "type": {
+                "type": "int",
+                "description": "0 for left click, 1 for right click."
+            },
+            "x_pos": {
+                "type": "int",
+                "description": "The horizontal screen coordinate."
+            },
+            "y_pos": {
+                "type": "int",
+                "description": "The vertical screen coordinate."
+            }
+        }
+    },
+
+    "keyboard_type": {
+        "description": "Type a string of text using the keyboard.",
+        "parameters": {
+            "text": {
+                "type": "str",
+                "description": "The text to type."
+            }
+        }
+    }
+}
